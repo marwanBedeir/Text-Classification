@@ -1,25 +1,18 @@
 import nltk
-try:
-    from nltk.corpus import gutenberg
-    from nltk.corpus import stopwords
-    from nltk.stem.porter import PorterStemmer
-    from nltk.stem import WordNetLemmatizer
-except:
-    nltk.download("gutenberg")
-    nltk.download("punkt")
-    nltk.download("stopwords")
-    nltk.download('wordnet')
+nltk.download("gutenberg")
+nltk.download("punkt")
+nltk.download("stopwords")
+nltk.download('wordnet')
 
-    from nltk.corpus import gutenberg
-    from nltk.corpus import stopwords
-    from nltk.stem.porter import PorterStemmer
-    from nltk.stem import WordNetLemmatizer
-finally:
-    import pandas as pd
-    import re
-    import random
-    stop_words = stopwords.words('english')
-    COLUMNS_NAMES = ['clean_text', 'book_name', 'book_id']
+from nltk.corpus import gutenberg
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+from nltk.stem import WordNetLemmatizer
+import pandas as pd
+import re
+import random
+stop_words = stopwords.words('english')
+COLUMNS_NAMES = ['clean_text', 'book_name', 'book_id']
 
 
 def get_random_sample(lst, sample_size):
