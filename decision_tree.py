@@ -28,7 +28,6 @@ if __name__ == '__main__':
         model.fit(x_train_trans, y_train)
         y_pred = model.predict(x_test_trans)
         acc = accuracy_score(y_pred, y_test)
-        acc_score.append(acc)
 
     avg_acc_score = sum(acc_score) / 10
 
